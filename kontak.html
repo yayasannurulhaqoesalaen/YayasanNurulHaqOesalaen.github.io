@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kontak Kami - Madrasah Ibtidaiyah Nurul Haq Oesalaen</title>
+  <link rel="stylesheet" href="assets/aos/aos.css" />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+    }
+
+    header {
+      background: #2d6a4f;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    .logo {
+      width: 100px;
+      height: auto;
+      display: block;
+      margin: 0 auto 10px;
+    }
+
+    nav {
+      background: #40916c;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    section {
+      padding: 40px 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #1b4332;
+      margin-bottom: 30px;
+    }
+
+    .contact-info, .contact-form {
+      max-width: 600px;
+      margin: 0 auto 40px;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .contact-form button {
+      background: #2d6a4f;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .contact-form button:hover {
+      background: #1b4332;
+    }
+
+    .map-container {
+      text-align: center;
+      margin: 40px auto;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 600px;
+      height: 300px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    .whatsapp-button {
+      display: inline-block;
+      background-color: #25D366;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 20px auto;
+      display: block;
+      width: max-content;
+    }
+
+    .whatsapp-button:hover {
+      background-color: #1ebe5d;
+    }
+
+    footer {
+      background: #1b4332;
+      color: white;
+      text-align: center;
+      padding: 16px;
+    }
+
+    a.back-link {
+      text-decoration: none;
+      color: white;
+      background: #2d6a4f;
+      padding: 10px 20px;
+      border-radius: 6px;
+      display: inline-block;
+      margin-top: 30px;
+      transition: background 0.3s ease;
+    }
+
+    a.back-link:hover {
+      background: #1b4332;
+    }
+  </style>
+</head>
+<body>
+
+  <header data-aos="fade-down">
+    <img src="assets/logo.png" alt="Logo Madrasah" class="logo" />
+    <h1>Madrasah Ibtidaiyah Nurul Haq Oesalaen</h1>
+    <p>Mendidik dengan Hati dan Ilmu</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Beranda</a>
+    <a href="tentang.html">Tentang</a>
+    <a href="program.html">Program</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="daftar.html">Pendaftaran</a>
+    <a href="kontak.html">Kontak</a>
+  </nav>
+
+  <section>
+    <h2 data-aos="fade-up">Kontak Kami</h2>
+
+    <div class="contact-info" data-aos="fade-up" data-aos-delay="100">
+      <p><strong>Alamat:</strong><br> Jl. Pendidikan No. 123, Kota Pendidikan, Indonesia</p>
+      <p><strong>Telepon / WhatsApp:</strong><br> 0812-3456-7890</p>
+      <p><strong>Email:</strong><br> info@mi-alhijrah.sch.id</p>
+      <p><strong>Jam Operasional:</strong><br> Senin – Jumat: 07.00 – 15.00</p>
+    </div>
+
+    <div class="contact-form" data-aos="fade-up" data-aos-delay="200">
+      <form action="#" method="post">
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="pesan">Pesan:</label>
+        <textarea id="pesan" name="pesan" rows="4" required></textarea>
+
+        <button type="submit">Kirim Pesan</button>
+      </form>
+    </div>
+
+    <div class="map-container" data-aos="fade-up" data-aos-delay="300">
+      <h3>Lokasi Kami</h3>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <div data-aos="fade-up" data-aos-delay="400" style="text-align: center;">
+      <a href="https://wa.me/6281234567890" target="_blank" class="whatsapp-button">Hubungi via WhatsApp</a>
+    </div>
+
+    <div style="text-align:center;" data-aos="fade-up" data-aos-delay="500">
+      <a href="index.html" class="back-link">← Kembali ke Beranda</a>
+    </div>
+  </section>
+
+  <footer data-aos="fade-up" data-aos-delay="600">
+    <p>&copy; 2025 Madrasah Ibtidaiyah Nurul Haq Oesalaen</p>
+  </footer>
+
+  <script src="assets/aos/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
