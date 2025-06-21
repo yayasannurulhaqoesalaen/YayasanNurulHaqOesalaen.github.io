@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Program Unggulan - Madrasah Ibtidaiyah Nurul Haq Oesalaen</title>
+  <title>Program Unggulan - Yayasan Nurul Haq Oesalaen</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 
-  <!-- AOS CSS Lokal -->
+  <!-- AOS CSS -->
   <link rel="stylesheet" href="assets/aos/aos.css" />
 
   <style>
@@ -130,13 +130,29 @@
         width: 80px;
       }
     }
+
+    .lihat-semua-btn {
+      background: #2d6a4f;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background 0.3s ease;
+    }
+
+    .lihat-semua-btn:hover {
+      background: #1b4332;
+    }
   </style>
 </head>
 <body>
 
   <header data-aos="fade-down">
-    <img src="assets/logo.png" alt="Logo Madrasah" class="logo" />
-    <h1>Madrasah Ibtidaiyah Nurul Haq Oesalaen</h1>
+    <img src="assets/logo.png" alt="Logo Yayasan" class="logo" />
+    <h1>Yayasan Nurul Haq Oesalaen</h1>
     <p>Mendidik dengan Hati dan Ilmu</p>
   </header>
 
@@ -151,7 +167,7 @@
 
   <section data-aos="fade-up">
     <h2>Program Unggulan</h2>
-    <div class="program-list">
+    <div class="program-list" id="programList">
       <div class="program-card" data-aos="zoom-in" data-aos-delay="100">
         <strong>Tahfidz Qur'an</strong>
         Program intensif menghafal Al-Qur'an sejak dini dengan bimbingan guru bersanad.
@@ -168,20 +184,40 @@
         <strong>Life Skill & Karakter</strong>
         Kegiatan pembentukan karakter, keterampilan hidup, dan kepemimpinan sejak usia dini.
       </div>
+      <div class="program-card extra-program" style="display: none;" data-aos="zoom-in" data-aos-delay="500">
+        <strong>Seni & Olahraga</strong>
+        Program pengembangan bakat seni dan olahraga untuk mendukung kreativitas dan kesehatan siswa.
+      </div>
+      <div class="program-card extra-program" style="display: none;" data-aos="zoom-in" data-aos-delay="600">
+        <strong>Pramuka</strong>
+        Kegiatan kepramukaan untuk menanamkan disiplin, gotong royong, dan jiwa kepemimpinan.
+      </div>
     </div>
-    <a href="index.html" class="back-link" data-aos="fade-left" data-aos-delay="500">← Kembali ke Beranda</a>
+
+    <div style="text-align: center;">
+      <button class="lihat-semua-btn" id="lihatSemuaBtn">Lihat Semua Program</button>
+    </div>
+
+    <a href="index.html" class="back-link" data-aos="fade-left" data-aos-delay="700">← Kembali ke Beranda</a>
   </section>
 
   <footer data-aos="fade-up">
-    <p>&copy; 2025 Madrasah Ibtidaiyah Nurul Haq Oesalaen</p>
+    <p>&copy; 2025 Yayasan Nurul Haq Oesalaen</p>
   </footer>
 
-  <!-- AOS JS Lokal -->
+  <!-- AOS JS -->
   <script src="assets/aos/aos.js"></script>
   <script>
     AOS.init({
       duration: 800,
       once: true
+    });
+
+    document.getElementById('lihatSemuaBtn').addEventListener('click', function() {
+      document.querySelectorAll('.extra-program').forEach(function(item) {
+        item.style.display = 'block';
+      });
+      this.style.display = 'none';
     });
   </script>
 </body>

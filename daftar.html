@@ -31,6 +31,7 @@
       background-color: #40916c;
       padding: 12px;
       text-align: center;
+      flex-wrap: wrap;
     }
 
     nav a {
@@ -41,6 +42,7 @@
       padding: 8px 14px;
       border-radius: 6px;
       transition: background 0.3s ease;
+      display: inline-block;
     }
 
     nav a:hover {
@@ -69,6 +71,27 @@
       padding: 15px;
       margin-top: 50px;
     }
+
+    /* MEDIA QUERY UNTUK HP */
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 8px 0;
+      }
+
+      .logo {
+        width: 70px;
+      }
+
+      section {
+        margin: 20px 10px;
+        padding: 15px;
+      }
+
+      iframe {
+        height: 1250px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -88,8 +111,7 @@
     <a href="kontak.html">Kontak</a>
   </nav>
 
-  <section>
-    <h2 style="text-align:center;">Formulir Pendaftaran Siswa Baru</h2>
+  <section>    
     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScA5N5em-M4Gt7WplpmLcZQIW5uY33JCTopAWgubDC3Rlrx_Q/viewform?embedded=true">
       Memuat…
     </iframe>

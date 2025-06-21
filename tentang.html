@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tentang Kami - Madrasah Ibtidaiyah Nurul Haq Oesalaen</title>
-  
+
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 
   <!-- AOS CSS Lokal -->
-  <link rel="stylesheet" href="assets/aos/aos.css">
+  <link rel="stylesheet" href="assets/aos/aos.css" />
 
   <style>
     body {
@@ -73,6 +73,7 @@
     section p {
       line-height: 1.7;
       margin-bottom: 16px;
+      font-size: 17px;
     }
 
     .back-link {
@@ -84,6 +85,7 @@
       border-radius: 5px;
       text-decoration: none;
       transition: background 0.3s ease;
+      font-size: 16px;
     }
 
     .back-link:hover {
@@ -96,21 +98,61 @@
       text-align: center;
       padding: 15px;
       margin-top: 60px;
+      font-size: 14px;
     }
 
+    /* ✅ RESPONSIVE TAMBAHAN UNTUK HP */
     @media (max-width: 600px) {
-      section {
-        margin: 20px;
-        padding: 20px;
+      body {
+        font-size: 16px;
+      }
+
+      header {
+        padding: 20px 10px;
+      }
+
+      .logo {
+        width: 80px;
+      }
+
+      h1 {
+        font-size: 20px;
+      }
+
+      p {
+        font-size: 15px;
+      }
+
+      nav {
+        padding: 10px;
       }
 
       nav a {
         display: block;
         margin: 8px 0;
+        font-size: 16px;
       }
 
-      .logo {
-        width: 80px;
+      section {
+        margin: 20px 12px;
+        padding: 20px;
+      }
+
+      section h2 {
+        font-size: 22px;
+        text-align: center;
+      }
+
+      .back-link {
+        font-size: 15px;
+        padding: 8px 14px;
+        display: block;
+        text-align: center;
+      }
+
+      footer {
+        font-size: 13px;
+        padding: 12px;
       }
     }
   </style>
@@ -118,7 +160,7 @@
 <body>
 
   <header data-aos="fade-down">
-    <img src="assets/logo.png" alt="Logo Madrasah" class="logo">
+    <img src="assets/logo.png" alt="Logo Madrasah" class="logo" />
     <h1>Madrasah Ibtidaiyah Nurul Haq Oesalaen</h1>
     <p>Mendidik dengan Hati dan Ilmu</p>
   </header>
