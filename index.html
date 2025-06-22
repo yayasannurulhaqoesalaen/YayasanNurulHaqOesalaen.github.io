@@ -3,109 +3,86 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pendaftaran - Pilih Jenjang</title>
+  <title>Yayasan Nurul Haq Oesalaen</title>
+
+  <!-- Font Google -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- AOS Lokal -->
+  <link rel="stylesheet" href="assets/aos/aos.css">
 
   <style>
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
-      background-color: #f8f9fa;
+      padding: 0;
+      background-color: #f1f5f9;
       color: #333;
     }
 
     header {
-      background: linear-gradient(to right, #2d6a4f, #1b4332);
+      background: linear-gradient(90deg, #2d6a4f, #1b4332);
       color: white;
-      text-align: center;
       padding: 30px 20px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
 
     .logo {
-      width: 90px;
-      margin: 0 auto 10px;
+      width: 120px;
+      height: auto;
       display: block;
+      margin: 0 auto 15px;
     }
 
     nav {
-      background-color: #40916c;
-      padding: 12px;
-      text-align: center;
-      flex-wrap: wrap;
+      background: #40916c;
+      position: relative;
     }
 
-    nav a {
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 28px;
       color: white;
-      margin: 0 12px;
+      padding: 15px 20px;
+      cursor: pointer;
+    }
+
+    .nav-links {
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    .nav-links a {
+      color: white;
+      margin: 0 15px;
       text-decoration: none;
       font-weight: 600;
-      padding: 8px 14px;
-      border-radius: 6px;
-      transition: background 0.3s ease;
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: background 0.3s;
       display: inline-block;
     }
 
-    nav a:hover {
-      background-color: rgba(255, 255, 255, 0.2);
+    .nav-links a:hover {
+      background: rgba(255, 255, 255, 0.2);
     }
 
     section {
-      max-width: 600px;
-      margin: 60px auto;
-      padding: 40px;
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
       background-color: white;
-      border-radius: 12px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-top: 30px;
     }
 
     section h2 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .form-row {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    select {
-      padding: 12px;
-      font-size: 16px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      flex: 1;
-      min-width: 200px;
-    }
-
-    button {
-      padding: 12px 24px;
-      font-size: 16px;
-      background-color: #2d6a4f;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    button i {
-      transition: transform 0.3s ease;
-    }
-
-    button:hover {
-      background-color: #1b4332;
-    }
-
-    button:hover i {
-      transform: translateX(4px);
+      color: #1b4332;
+      margin-bottom: 20px;
     }
 
     footer {
@@ -116,84 +93,88 @@
       margin-top: 50px;
     }
 
-    @media (max-width: 600px) {
-      .logo {
-        width: 60px;
+    /* RESPONSIF */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
       }
 
-      nav a {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        text-align: left;
+        padding: 10px 20px;
+      }
+
+      .nav-links a {
         display: block;
-        margin: 6px 0;
-        font-size: 14px;
+        margin: 10px 0;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .logo {
+        width: 80px;
       }
 
       section {
-        margin: 30px 10px;
         padding: 20px;
-      }
-
-      .form-row {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      select, button {
-        width: 100%;
-      }
-
-      button {
-        justify-content: center;
       }
     }
   </style>
 </head>
 <body>
 
-  <header>
+  <header data-aos="fade-down">
     <img src="assets/logo.png" alt="Logo Madrasah" class="logo">
-    <h1>Pendaftaran Siswa Baru</h1>
-    <p>Silakan pilih jenjang pendidikan</p>
+    <h1>Yayasan Nurul Haq Oesalaen</h1>
+    <p>Mendidik dengan Hati dan Ilmu</p>
   </header>
 
-  <nav>
-    <a href="index.html">Beranda</a>
-    <a href="tentang.html">Tentang</a>
-    <a href="program.html">Program</a>
-    <a href="galeri.html">Galeri</a>
-    <a href="daftar.html">Pendaftaran</a>
-    <a href="kontak.html">Kontak</a>
+  <nav data-aos="fade-up">
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Beranda</a>
+      <a href="tentang.html">Tentang</a>
+      <a href="program.html">Program</a>
+      <a href="galeri.html">Galeri</a>
+      <a href="daftar.html">Pendaftaran</a>
+      <a href="kontak.html">Kontak</a>
+    </div>
   </nav>
 
-  <section>
-    <h2>Pilih Jenjang Pendidikan</h2>
-    <div class="form-row">
-      <select id="formSelector">
-        <option value="">-- Pilih Jenjang --</option>
-        <option value="RA">R.A (Raudhatul Athfal)</option>
-        <option value="MI">M.I (Madrasah Ibtidaiyah)</option>
-      </select>
-      <button onclick="goToForm()">
-        Lanjut <i class="fas fa-arrow-right"></i>
-      </button>
-    </div>
+  <section id="galeri" data-aos="zoom-in">
+    <h2>Galeri Kegiatan</h2>
+    <p>[Tempatkan foto kegiatan di sini. Misalnya: upacara bendera, belajar mengaji, lomba antar kelas, dll]</p>
   </section>
 
-  <footer>
+  <section id="daftar" data-aos="zoom-in">
+    <h2>Pendaftaran Siswa Baru</h2>
+    <p>Hubungi kami melalui WhatsApp atau datang langsung ke sekolah kami setiap hari kerja. Kami terbuka untuk kunjungan orang tua/wali!</p>
+  </section>
+
+  <section id="kontak" data-aos="zoom-in">
+    <h2>Kontak Kami</h2>
+    <p><strong>Alamat:</strong> Jl. Pendidikan No. 123, Kota Pendidikan</p>
+    <p><strong>WhatsApp:</strong> 0812-3456-7890</p>
+    <p><strong>Email:</strong> info@mi-alhijrah.sch.id</p>
+  </section>
+
+  <footer data-aos="fade-up">
     <p>&copy; 2025 Yayasan Nurul Haq Oesalaen</p>
   </footer>
 
+  <!-- AOS Lokal -->
+  <script src="assets/aos/aos.js"></script>
   <script>
-    function goToForm() {
-      const value = document.getElementById("formSelector").value;
-      if (value === "RA") {
-        window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSfw1HQWCi912kvxCFwwG-aLLvCt6c3XkqgxfGl49c9WNH7g7g/viewform";
-      } else if (value === "MI") {
-        window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSfNQS9GxAq-N3Ydi2X6MVKWJaORr2831rh85g8u6DR5Qu_cNA/viewform";
-      } else {
-        alert("Silakan pilih jenjang terlebih dahulu.");
-      }
+    AOS.init({ duration: 800, once: true });
+
+    function toggleMenu() {
+      const nav = document.getElementById('navLinks');
+      nav.classList.toggle('active');
     }
   </script>
-
 </body>
 </html>
