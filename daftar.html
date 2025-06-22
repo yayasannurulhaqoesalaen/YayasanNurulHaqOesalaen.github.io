@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pendaftaran - Madrasah Ibtidaiyah Nurul Haq Oesalaen</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pendaftaran - Pilih Jenjang</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
@@ -31,7 +31,6 @@
       background-color: #40916c;
       padding: 12px;
       text-align: center;
-      flex-wrap: wrap;
     }
 
     nav a {
@@ -50,19 +49,37 @@
     }
 
     section {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 20px;
+      max-width: 600px;
+      margin: 60px auto;
+      padding: 40px;
       background-color: white;
       border-radius: 12px;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      text-align: center;
     }
 
-    iframe {
-      width: 100%;
-      height: 1100px;
+    select {
+      padding: 12px;
+      width: 80%;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 12px 24px;
+      font-size: 16px;
+      background-color: #2d6a4f;
+      color: white;
       border: none;
-      margin-bottom: 40px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #1b4332;
     }
 
     footer {
@@ -72,34 +89,14 @@
       padding: 15px;
       margin-top: 50px;
     }
-
-    @media (max-width: 600px) {
-      nav a {
-        display: block;
-        margin: 8px 0;
-      }
-
-      .logo {
-        width: 70px;
-      }
-
-      section {
-        margin: 20px 10px;
-        padding: 15px;
-      }
-
-      iframe {
-        height: 1250px;
-      }
-    }
   </style>
 </head>
 <body>
 
   <header>
     <img src="assets/logo.png" alt="Logo Madrasah" class="logo">
-    <h1>Madrasah Ibtidaiyah Nurul Haq Oesalaen</h1>
-    <p>Mendidik dengan Hati dan Ilmu</p>
+    <h1>Pendaftaran Siswa Baru</h1>
+    <p>Silakan pilih jenjang pendidikan</p>
   </header>
 
   <nav>
@@ -111,21 +108,33 @@
     <a href="kontak.html">Kontak</a>
   </nav>
 
-  <section>    
-    <!-- Form Pertama -->
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfw1HQWCi912kvxCFwwG-aLLvCt6c3XkqgxfGl49c9WNH7g7g/viewform?embedded=true">
-      Memuat…
-    </iframe>
-
-    <!-- Form Kedua -->
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfNQS9GxAq-N3Ydi2X6MVKWJaORr2831rh85g8u6DR5Qu_cNA/viewform?embedded=true">
-      Memuat…
-    </iframe>
+  <section>
+    <h2>Pilih Jenjang Pendidikan</h2>
+    <select id="formSelector">
+      <option value="">-- Pilih Jenjang --</option>
+      <option value="RA">R.A (Raudhatul Athfal)</option>
+      <option value="MI">M.I (Madrasah Ibtidaiyah)</option>
+    </select>
+    <br />
+    <button onclick="goToForm()">Lanjut</button>
   </section>
 
   <footer>
     <p>&copy; 2025 Madrasah Ibtidaiyah Nurul Haq Oesalaen</p>
   </footer>
+
+  <script>
+    function goToForm() {
+      const value = document.getElementById("formSelector").value;
+      if (value === "RA") {
+        window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSfNQS9GxAq-N3Ydi2X6MVKWJaORr2831rh85g8u6DR5Qu_cNA/viewform";
+      } else if (value === "MI") {
+        window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSfw1HQWCi912kvxCFwwG-aLLvCt6c3XkqgxfGl49c9WNH7g7g/viewform";
+      } else {
+        alert("Silakan pilih jenjang terlebih dahulu.");
+      }
+    }
+  </script>
 
 </body>
 </html>
