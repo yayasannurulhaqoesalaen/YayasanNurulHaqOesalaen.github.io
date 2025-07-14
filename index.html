@@ -90,15 +90,47 @@
       margin-top: 20px;
     }
 
-    .gallery-grid img {
+    .gallery-grid a img {
       width: 100%;
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       transition: transform 0.3s ease;
     }
 
-    .gallery-grid img:hover {
+    .gallery-grid a img:hover {
       transform: scale(1.05);
+    }
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 85%;
+      border-radius: 10px;
+    }
+
+    .lightbox:target {
+      display: flex;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 30px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
     }
 
     footer {
@@ -163,17 +195,30 @@
   <section id="galeri" data-aos="zoom-in">
     <h2>Galeri Kegiatan</h2>
     <div class="gallery-grid">
-      <img src="assets/Kegiatan2.jpg" alt="Spanduk Kegiatan" data-aos="fade-up">
-      <img src="assets/kegiatan1.jpg" alt="Belajar" data-aos="fade-up" data-aos-delay="100">
-      <img src="assets/kegiatan3.jpg" alt="Outing Class" data-aos="fade-up" data-aos-delay="200">
-      <img src="assets/kegiatan4.jpg" alt="Lomba" data-aos="fade-up" data-aos-delay="300">
+      <a href="#img1"><img src="assets/Kegiatan2.jpg" alt="Spanduk" data-aos="fade-up"></a>
+      <a href="#img2"><img src="assets/kegiatan2.jpg" alt="Belajar" data-aos="fade-up" data-aos-delay="100"></a>
+      <a href="#img3"><img src="assets/kegiatan3.jpg" alt="Outing" data-aos="fade-up" data-aos-delay="200"></a>
+      <a href="#img4"><img src="assets/kegiatan4.jpg" alt="Lomba" data-aos="fade-up" data-aos-delay="300"></a>
     </div>
   </section>
 
-  <section id="daftar" data-aos="zoom-in">
-    <h2>Pendaftaran Siswa Baru</h2>
-    <p>Hubungi kami melalui WhatsApp atau datang langsung ke sekolah kami setiap hari kerja. Kami terbuka untuk kunjungan orang tua/wali!</p>
-  </section>
+  <!-- Lightbox Section -->
+  <div id="img1" class="lightbox">
+    <a href="#" class="lightbox-close">&times;</a>
+    <img src="assets/kegiatan1.jpg" alt="Upacara">
+  </div>
+  <div id="img2" class="lightbox">
+    <a href="#" class="lightbox-close">&times;</a>
+    <img src="assets/kegiatan2.jpg" alt="Belajar">
+  </div>
+  <div id="img3" class="lightbox">
+    <a href="#" class="lightbox-close">&times;</a>
+    <img src="assets/kegiatan3.jpg" alt="Outing">
+  </div>
+  <div id="img4" class="lightbox">
+    <a href="#" class="lightbox-close">&times;</a>
+    <img src="assets/kegiatan4.jpg" alt="Lomba">
+  </div>
 
   <section id="kontak" data-aos="zoom-in">
     <h2>Kontak Kami</h2>
@@ -186,6 +231,7 @@
     <p>&copy; 2025 Yayasan Nurul Haq Oesalaen</p>
   </footer>
 
+  <!-- Script AOS dan Menu -->
   <script src="assets/aos/aos.js"></script>
   <script>
     AOS.init({ duration: 800, once: true });
