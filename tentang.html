@@ -58,7 +58,7 @@
     }
 
     section {
-      max-width: 900px;
+      max-width: 960px;
       margin: 40px auto;
       padding: 30px;
       background-color: #ffffff;
@@ -70,12 +70,39 @@
       color: #1b4332;
       margin-bottom: 20px;
       font-size: 28px;
+      text-align: center;
     }
 
     section p {
       line-height: 1.7;
       margin-bottom: 16px;
       font-size: 17px;
+    }
+
+    .staff-profil {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 30px;
+      gap: 20px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 20px;
+    }
+
+    .staff-profil img {
+      width: 180px;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .staff-profil .info {
+      flex: 1;
+    }
+
+    .staff-profil .info h3 {
+      margin-top: 0;
+      color: #2d6a4f;
     }
 
     .back-link {
@@ -103,58 +130,20 @@
       font-size: 14px;
     }
 
-    /* ✅ RESPONSIVE TAMBAHAN UNTUK HP */
-    @media (max-width: 600px) {
-      body {
-        font-size: 16px;
-      }
-
-      header {
-        padding: 20px 10px;
-      }
-
-      .logo {
-        width: 80px;
-      }
-
-      h1 {
-        font-size: 20px;
-      }
-
-      p {
-        font-size: 15px;
-      }
-
-      nav {
-        padding: 10px;
-      }
-
-      nav a {
-        display: block;
-        margin: 8px 0;
-        font-size: 16px;
-      }
-
-      section {
-        margin: 20px 12px;
-        padding: 20px;
-      }
-
-      section h2 {
-        font-size: 22px;
+    @media (max-width: 768px) {
+      .staff-profil {
+        flex-direction: column;
+        align-items: center;
         text-align: center;
       }
 
-      .back-link {
-        font-size: 15px;
-        padding: 8px 14px;
-        display: block;
-        text-align: center;
+      .staff-profil img {
+        width: 160px;
+        height: 200px;
       }
 
-      footer {
-        font-size: 13px;
-        padding: 12px;
+      .staff-profil .info {
+        margin-top: 10px;
       }
     }
   </style>
@@ -176,10 +165,10 @@
     <a href="kontak.html">Kontak</a>
   </nav>
 
-  <section data-aos="zoom-in">
+  <section data-aos="fade-up">
     <h2>Tentang Kami</h2>
     <p>
-      Madrasah Ibtidaiyah Nurul Haq Oesalaen berdiri sejak tahun 2000 dan berkomitmen memberikan pendidikan Islam yang unggul serta membentuk generasi berakhlak mulia, cerdas, dan mandiri.
+      Madrasah Ibtidaiyah Nurul Haq Oesalaen berdiri sejak tahun 2025 dan berkomitmen memberikan pendidikan Islam yang unggul serta membentuk generasi berakhlak mulia, cerdas, dan mandiri.
     </p>
     <p>
       Kami menggabungkan kurikulum nasional dengan nilai-nilai keislaman, serta menekankan pada pembelajaran Tahfidzul Qur'an, bahasa asing, dan pembinaan karakter siswa.
@@ -187,7 +176,42 @@
     <p>
       Dengan tenaga pendidik profesional dan lingkungan belajar yang aman serta nyaman, MI Nurul Haq Oesalaen siap menjadi pilihan terbaik untuk pendidikan dasar anak-anak Anda.
     </p>
-    <a href="index.html" class="back-link" data-aos="fade-right">← Kembali ke Beranda</a>
+  </section>
+
+  <section data-aos="fade-up">
+    <h2>Profil Pegawai</h2>
+
+    <!-- Kepala Madrasah -->
+    <div class="staff-profil">
+      <img src="assets/staff/kepala-sekolah.jpg" alt="Kepala Madrasah" />
+      <div class="info">
+        <h3>Ustadzah Siti Nurjanah</h3>
+        <p><strong>Jabatan:</strong> Kepala Madrasah</p>
+        <p>Berpengalaman lebih dari 10 tahun dalam dunia pendidikan Islam dasar. Memimpin dengan visi cinta Al-Qur’an dan akhlakul karimah.</p>
+      </div>
+    </div>
+
+    <!-- Operator Sekolah -->
+    <div class="staff-profil">
+      <img src="assets/staff/operator.jpg" alt="Operator Sekolah" />
+      <div class="info">
+        <h3>Bapak Ahmad Fauzi</h3>
+        <p><strong>Jabatan:</strong> Operator Sekolah</p>
+        <p>Mengelola sistem administrasi dan data sekolah secara digital serta membantu proses PPDB dan laporan EMIS.</p>
+      </div>
+    </div>
+
+    <!-- Guru PAI -->
+    <div class="staff-profil">
+      <img src="assets/staff/guru-pai.jpg" alt="Guru PAI" />
+      <div class="info">
+        <h3>Ustadzah Fatimah Zahra</h3>
+        <p><strong>Jabatan:</strong> Guru Pendidikan Agama Islam (PAI)</p>
+        <p>Aktif dalam mengajarkan akidah akhlak, fiqih, sejarah Islam, dan menanamkan nilai-nilai moral serta spiritual pada peserta didik.</p>
+      </div>
+    </div>
+
+    <a href="index.html" class="back-link">← Kembali ke Beranda</a>
   </section>
 
   <footer data-aos="fade-up">
